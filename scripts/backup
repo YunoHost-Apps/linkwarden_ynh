@@ -22,6 +22,8 @@ ynh_backup --src_path="$data_dir" --is_big
 
 ynh_backup --src_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
+ynh_backup --src_path="/var/log/$app"
+
 ynh_backup --src_path="/etc/logrotate.d/$app"
 
 ynh_backup --src_path="/etc/systemd/system/$app.service"
