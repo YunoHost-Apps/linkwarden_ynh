@@ -8,9 +8,10 @@ User=__APP__
 Group=__APP__
 
 EnvironmentFile=__INSTALL_DIR__/.env
+Environment="__YNH_NODE_LOAD_PATH__"
 
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=ynh_exec_as $app $ynh_node_load_PATH yarn start
+ExecStart=yarn start
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 Restart=on-failure
