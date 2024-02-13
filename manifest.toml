@@ -13,7 +13,6 @@ maintainers = [ "Lapineige" ]
 [upstream]
 license = "AGPL v3"
 website = "https://linkwarden.app/"
-
 admindoc = "https://docs.linkwarden.app/self-hosting/installation"
 userdoc = "https://docs.linkwarden.app/Usage/overview"
 code = "https://github.com/linkwarden/linkwarden"
@@ -22,12 +21,11 @@ code = "https://github.com/linkwarden/linkwarden"
 yunohost = '>= 11.2'
 architectures = "all"
 multi_instance = true
-ldap = false          # TODO : fixme, use actual booleans + handle the "not_relevant" value
+ldap = false
 sso = true
-# FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G... You may have have a look at CI results
 disk = "50M"
-ram.build = "50M"
-ram.runtime = "50M"
+ram.build = "1500M"
+ram.runtime = "100M"
 
 [install]
 
