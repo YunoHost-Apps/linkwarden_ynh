@@ -8,7 +8,7 @@ description.fr = "Gestionnaire de signets collaboratif pour collecter, organiser
 
 version = "2.4.9~ynh1"
 
-maintainers = ["Lapineige"]
+maintainers = [ "Lapineige" ]
 
 [upstream]
 license = "AGPL v3"
@@ -20,9 +20,9 @@ code = "https://github.com/linkwarden/linkwarden"
 
 [integration]
 yunohost = '>= 11.2'
-architectures = "all" # TODO : handle the "all" option (no ["all"])
+architectures = "all"
 multi_instance = true
-ldap = false # TODO : fixme, use actual booleans + handle the "not_relevant" value
+ldap = false          # TODO : fixme, use actual booleans + handle the "not_relevant" value
 sso = true
 # FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G... You may have have a look at CI results
 disk = "50M"
@@ -46,7 +46,7 @@ ram.runtime = "50M"
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
-    choices = ['en']
+    choices = [ "en" ]
     default = "en"
 
 [resources]
@@ -54,36 +54,27 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        # This will pre-fetch the asset which can then be deployed during the install/upgrade scripts with :
-        #    ynh_setup_source --dest_dir="$install_dir"
-        # You can also define other assets than "main" and add --source_id="foobar" in the previous command
         url = "https://github.com/linkwarden/linkwarden/archive/refs/tags/v2.4.9.tar.gz"
         sha256 = "12e4224e3ae22308bf31ab933208301008c0afcefb29db9257fc42fc4916b7b1"
+        autoupdate.strategy = "latest_github_release"
 
-        # These infos are used by https://github.com/YunoHost/apps/blob/master/tools/autoupdate_app_sources/autoupdate_app_sources.py
-        # to auto-update the previous asset urls and sha256sum + manifest version
-        # assuming the upstream's code repo is on github and relies on tags or releases
-        # See the 'sources' resource documentation for more details
+[resources.system_user]
 
-        autoupdate.strategy = "latest_github_tag"
+[resources.install_dir]
 
-    [resources.system_user]
+[resources.data_dir]
 
-    [resources.install_dir]
+[resources.permissions]
+main.url = "/"
 
-    [resources.data_dir]
+[resources.ports]
 
-    [resources.permissions]
-    main.url = "/"
+[resources.apt]
+packages = "postgresql, postgresql-contrib"
 
-    [resources.ports]
+extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
+extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
+extras.yarn.packages = "yarn"
 
-    [resources.apt]
-    packages = "postgresql, postgresql-contrib"
-
-    extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
-    extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
-    extras.yarn.packages = "yarn"
-
-    [resources.database]
-    type = "postgresql"
+[resources.database]
+type = "postgresql"
