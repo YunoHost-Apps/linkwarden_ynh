@@ -18,7 +18,13 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Collaborative bookmark manager to collect, organize and archive webpages.
 
+
 **Shipped version:** 2.4.9~ynh1
+
+## Screenshots
+
+![Screenshot of Linkwarden](./doc/screenshots/dashboard.jpg)
+
 ## Documentation and resources
 
 * Official app website: <https://linkwarden.app/>

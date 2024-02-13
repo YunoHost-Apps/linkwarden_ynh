@@ -18,7 +18,13 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 Gestionnaire de signets collaboratif pour collecter, organiser et archiver les pages web.
 
+
 **Version incluse :** 2.4.9~ynh1
+
+## Captures d’écran
+
+![Capture d’écran de Linkwarden](./doc/screenshots/dashboard.jpg)
+
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://linkwarden.app/>
