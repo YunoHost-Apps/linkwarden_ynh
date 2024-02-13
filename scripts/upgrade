@@ -11,6 +11,8 @@ source /usr/share/yunohost/helpers
 
 upgrade_type=$(ynh_check_app_version_changed)
 
+ynh_use_nodejs # needed to complete ynh_node variables
+
 #=================================================
 # STANDARD UPGRADE STEPS
 #=================================================
