@@ -11,7 +11,7 @@ version = "2.4.9~ynh1"
 maintainers = [ "Lapineige" ]
 
 [upstream]
-license = "AGPL v3"
+license = "AGPL-3.0-only"
 website = "https://linkwarden.app/"
 admindoc = "https://docs.linkwarden.app/self-hosting/installation"
 userdoc = "https://docs.linkwarden.app/Usage/overview"
