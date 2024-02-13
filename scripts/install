@@ -69,6 +69,7 @@ ynh_script_progression --message="Installing app..." --weight=5
 
 pushd $install_dir
     #ynh_exec_as $app $ynh_node_load_PATH $ynh_npm exec -y -- playwright install-deps  # install DEPENDENCIES
+    ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install next
     ynh_exec_as $app $ynh_node_load_PATH yarn build
     ynh_exec_as $app $ynh_node_load_PATH yarn prisma migrate deploy
 popd
