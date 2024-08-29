@@ -30,15 +30,9 @@ ynh_restore_file --origin_path="$data_dir" --not_mandatory
 chown -R "$app:www-data" "$data_dir"
 
 #=================================================
-# RESTORE THE MYSQL DATABASE
-#=================================================
-
-#=================================================
 # RESTORE SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression --message="Restoring system configurations related to $app..." --weight=1
-
-# This should be a symetric version of what happens in the install script
 
 ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
@@ -47,19 +41,14 @@ systemctl enable "$app.service" --quiet
 
 yunohost service add "$app" --log="/var/log/$app/$app.log"
 
-ynh_restore_file --origin_path="/var/log/$app"
-
 ynh_restore_file --origin_path="/etc/logrotate.d/$app"
-
-# Other various files...
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server and $app's service..." --weight=1
 
-# Typically you only have either $app or php-fpm but not both at the same time...
-ynh_systemd_action --service_name="$app" --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name="$app" --action="start" --log_path="systemd"
 
 ynh_systemd_action --service_name=nginx --action=reload
 
