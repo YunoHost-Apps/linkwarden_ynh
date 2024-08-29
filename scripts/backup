@@ -1,8 +1,5 @@
 #!/bin/bash
-#### App file generated with YoloGen, the YunoHost app generator, version .
 
-#=================================================
-# GENERIC START
 #=================================================
 # IMPORT GENERIC HELPERS
 #=================================================
@@ -12,21 +9,31 @@ source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# DECLARE DATA AND CONF FILES TO BACKUP
+# BACKUP THE APP MAIN DIR
 #=================================================
-ynh_print_info --message="Declaring files to be backed up..."
 
 ynh_backup --src_path="$install_dir"
 
+#=================================================
+# BACKUP THE DATA DIR
+#=================================================
+
 ynh_backup --src_path="$data_dir" --is_big
+
+#=================================================
+# SYSTEM CONFIGURATION
+#=================================================
 
 ynh_backup --src_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
-ynh_backup --src_path="/var/log/$app"
-
-ynh_backup --src_path="/etc/logrotate.d/$app"
-
 ynh_backup --src_path="/etc/systemd/system/$app.service"
+
+#=================================================
+# BACKUP THE POSTGRESQL DATABASE
+#=================================================
+ynh_print_info --message="Backing up the PostgreSQL database..."
+
+ynh_psql_dump_db --database="$db_name" > db.sql
 
 #=================================================
 # END OF SCRIPT
