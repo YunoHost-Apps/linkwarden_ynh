@@ -9,7 +9,7 @@ Group=__APP__
 EnvironmentFile=__INSTALL_DIR__/.env
 Environment="__YNH_NODE_LOAD_PATH__"
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=yarn start
+ExecStart=/usr/bin/yarn start
 Restart=on-failure
 RestartSec=10
 
