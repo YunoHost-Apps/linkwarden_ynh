@@ -52,6 +52,8 @@ pushd "$install_dir"
      ynh_hide_warnings yarn prisma migrate deploy
 popd
 
+chown -R "$app:$app" "$install_dir"
+
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
