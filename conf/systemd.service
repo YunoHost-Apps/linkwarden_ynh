@@ -1,19 +1,15 @@
 [Unit]
-Description=Service for Linkwarden (__APP__)
+Description=Linkwarden: collaborative bookmark manager
 After=network.target nginx.service
 
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
-
 EnvironmentFile=__INSTALL_DIR__/.env
-Environment="__YNH_NODE_LOAD_PATH__"
-
+Environment="PATH=__PATH_WITH_NODEJS__"
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=yarn start
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
+ExecStart=/usr/bin/yarn start
 Restart=on-failure
 RestartSec=10
 
