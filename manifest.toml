@@ -52,23 +52,23 @@ ram.runtime = "100M"
         sha256 = "1376a5c32530973cd940f9305862274db6263f88f536280922c20b7c4a2e557e"
         autoupdate.strategy = "latest_github_release"
 
-[resources.system_user]
+    [resources.system_user]
 
-[resources.install_dir]
+    [resources.install_dir]
 
-[resources.data_dir]
+    [resources.data_dir]
 
-[resources.permissions]
-main.url = "/"
+    [resources.permissions]
+    main.url = "/"
 
-[resources.ports]
+    [resources.ports]
 
-[resources.apt]
-packages = "postgresql, postgresql-contrib"
+    [resources.apt]
+    packages = "postgresql, postgresql-contrib"
 
-extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
-extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
-extras.yarn.packages = "yarn"
+    extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
+    extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
+    extras.yarn.packages = "yarn"
 
-[resources.database]
-type = "postgresql"
+    [resources.database]
+    type = "postgresql"
