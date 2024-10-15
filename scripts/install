@@ -52,7 +52,7 @@ pushd "$install_dir"
     #ynh_exec_as_app yarn build
     #ynh_exec_as_app yarn prisma migrate deploy
 
-    ynh_exec_as_app npm exec -- playwright install-deps # install DEPENDENCIES
+    ynh_exec_as_app npx playwright install
     ynh_exec_as_app yarn build
     ynh_exec_as_app yarn prisma migrate deploy
 popd
