@@ -47,7 +47,7 @@ ynh_script_progression "Installing app..."
 
 pushd "$install_dir"
     #ynh_exec_as_app npm install next
-    #ynh_exec_as_app yarn #--force
+    ynh_exec_as_app yarn --force
     ynh_exec_as_app npm install
     ynh_exec_as_app npx playwright install --with-deps chromium
     ynh_exec_as_app yarn build
