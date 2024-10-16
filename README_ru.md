@@ -19,7 +19,7 @@
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Поставляемая версия:** 2.7.1~ynh1
+**Поставляемая версия:** 2.7.1~ynh2
 
 ## Снимки экрана
 

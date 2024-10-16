@@ -19,7 +19,7 @@ NON debe editarse manualmente.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Versión proporcionada:** 2.7.1~ynh1
+**Versión proporcionada:** 2.7.1~ynh2
 
 ## Capturas de pantalla
 
