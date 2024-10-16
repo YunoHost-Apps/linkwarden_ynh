@@ -22,7 +22,7 @@ ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --full_replace #--keep=".env"
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env"
 
 #=================================================
 # UPGRADE DEPENDENCIES
@@ -30,13 +30,9 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace #--keep=".env"
 ynh_script_progression "Upgrading dependencies..."
 
 pushd "$install_dir"
-     ynh_hide_warnings npm install next --force
-     ynh_hide_warnings npx playwright install --with-deps chromium
-     ynh_hide_warnings yarn build
-     ynh_hide_warnings yarn prisma migrate deploy
+    ynh_hide_warnings npm install next --force
+    ynh_hide_warnings yarn build
 popd
-
-chown -R "$app:$app" "$install_dir"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
