@@ -22,7 +22,7 @@ ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --keep=".env" --full_replace
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env"
 
 #=================================================
 # UPGRADE DEPENDENCIES
@@ -30,8 +30,8 @@ ynh_setup_source --dest_dir="$install_dir" --keep=".env" --full_replace
 ynh_script_progression "Upgrading dependencies..."
 
 pushd "$install_dir"
-    ynh_exec_as_app npm install next
-    ynh_exec_as_app yarn build
+    ynh_hide_warnings npm install next --force
+    ynh_hide_warnings yarn build
 popd
 
 #=================================================
