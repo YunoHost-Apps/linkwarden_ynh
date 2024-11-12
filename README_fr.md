@@ -19,7 +19,7 @@ Il NE doit PAS être modifié à la main.
 Gestionnaire de signets collaboratif pour collecter, organiser et archiver les pages web.
 
 
-**Version incluse :** 2.7.1~ynh2
+**Version incluse :** 2.8.0~ynh1
 
 ## Captures d’écran
 

@@ -19,7 +19,7 @@
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**分发版本：** 2.7.1~ynh2
+**分发版本：** 2.8.0~ynh1
 
 ## 截图
 
