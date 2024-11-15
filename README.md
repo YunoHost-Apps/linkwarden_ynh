@@ -19,7 +19,7 @@ It shall NOT be edited by hand.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Shipped version:** 2.8.1~ynh1
+**Shipped version:** 2.8.3~ynh1
 
 ## Screenshots
 
