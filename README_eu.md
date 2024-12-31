@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Linkwarden YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/linkwarden.svg)](https://ci-apps.yunohost.org/ci/apps/linkwarden/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/linkwarden.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/linkwarden.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/linkwarden)](https://ci-apps.yunohost.org/ci/apps/linkwarden/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/linkwarden)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/linkwarden)
 
 [![Instalatu Linkwarden YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=linkwarden)
 
@@ -19,7 +21,7 @@ EZ editatu eskuz.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Paketatutako bertsioa:** 2.8.3~ynh1
+**Paketatutako bertsioa:** 2.8.4~ynh1
 
 ## Pantaila-argazkiak
 

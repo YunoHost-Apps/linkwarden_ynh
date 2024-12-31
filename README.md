@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # Linkwarden for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/linkwarden.svg)](https://ci-apps.yunohost.org/ci/apps/linkwarden/) ![Working status](https://ci-apps.yunohost.org/ci/badges/linkwarden.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/linkwarden.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/linkwarden)](https://ci-apps.yunohost.org/ci/apps/linkwarden/)
+![Working status](https://apps.yunohost.org/badge/state/linkwarden)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/linkwarden)
 
 [![Install Linkwarden with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=linkwarden)
 
@@ -19,7 +21,7 @@ It shall NOT be edited by hand.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Shipped version:** 2.8.3~ynh1
+**Shipped version:** 2.8.4~ynh1
 
 ## Screenshots
 

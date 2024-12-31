@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Linkwarden
 
-[![集成程度](https://dash.yunohost.org/integration/linkwarden.svg)](https://ci-apps.yunohost.org/ci/apps/linkwarden/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/linkwarden.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/linkwarden.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/linkwarden)](https://ci-apps.yunohost.org/ci/apps/linkwarden/)
+![工作状态](https://apps.yunohost.org/badge/state/linkwarden)
+![维护状态](https://apps.yunohost.org/badge/maintained/linkwarden)
 
 [![使用 YunoHost 安装 Linkwarden](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=linkwarden)
 
@@ -19,7 +21,7 @@
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**分发版本：** 2.8.3~ynh1
+**分发版本：** 2.8.4~ynh1
 
 ## 截图
 
