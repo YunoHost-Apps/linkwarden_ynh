@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # Linkwarden voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/linkwarden.svg)](https://ci-apps.yunohost.org/ci/apps/linkwarden/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/linkwarden.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/linkwarden.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/linkwarden)](https://ci-apps.yunohost.org/ci/apps/linkwarden/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/linkwarden)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/linkwarden)
 
 [![Linkwarden met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=linkwarden)
 
@@ -19,7 +21,7 @@ Hij mag NIET handmatig aangepast worden.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Geleverde versie:** 2.8.3~ynh1
+**Geleverde versie:** 2.8.4~ynh1
 
 ## Schermafdrukken
 

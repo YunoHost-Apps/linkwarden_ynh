@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # Linkwarden pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/linkwarden.svg)](https://ci-apps.yunohost.org/ci/apps/linkwarden/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/linkwarden.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/linkwarden.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/linkwarden)](https://ci-apps.yunohost.org/ci/apps/linkwarden/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/linkwarden)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/linkwarden)
 
 [![Installer Linkwarden avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=linkwarden)
 
@@ -19,7 +21,7 @@ Il NE doit PAS être modifié à la main.
 Gestionnaire de signets collaboratif pour collecter, organiser et archiver les pages web.
 
 
-**Version incluse :** 2.8.3~ynh1
+**Version incluse :** 2.8.4~ynh1
 
 ## Captures d’écran
 
