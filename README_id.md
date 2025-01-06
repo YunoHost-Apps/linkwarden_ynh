@@ -21,7 +21,7 @@ Ini TIDAK boleh diedit dengan tangan.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Versi terkirim:** 2.8.4~ynh1
+**Versi terkirim:** 2.9.1~ynh1
 
 ## Tangkapan Layar
 

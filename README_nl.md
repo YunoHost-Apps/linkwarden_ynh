@@ -21,7 +21,7 @@ Hij mag NIET handmatig aangepast worden.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Geleverde versie:** 2.8.4~ynh1
+**Geleverde versie:** 2.9.1~ynh1
 
 ## Schermafdrukken
 
