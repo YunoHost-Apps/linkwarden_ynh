@@ -21,7 +21,7 @@ It shall NOT be edited by hand.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Shipped version:** 2.8.4~ynh1
+**Shipped version:** 2.9.2~ynh1
 
 ## Screenshots
 

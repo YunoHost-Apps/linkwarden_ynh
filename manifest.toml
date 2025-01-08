@@ -8,7 +8,7 @@ name = "Linkwarden"
 description.en = "Collaborative bookmark manager to collect, organize and archive webpages"
 description.fr = "Gestionnaire de signets collaboratif pour collecter, organiser et archiver les pages Web"
 
-version = "2.8.4~ynh1"
+version = "2.9.2~ynh1"
 
 maintainers = [ "Lapineige" ]
 
@@ -20,12 +20,14 @@ userdoc = "https://docs.linkwarden.app/Usage/overview"
 code = "https://github.com/linkwarden/linkwarden"
 
 [integration]
-yunohost = '>= 11.2.30'
+yunohost = '>= 12.0.9'
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
+
 ldap = false
 sso = true
+
 disk = "50M"
 ram.build = "1500M"
 ram.runtime = "100M"
@@ -44,8 +46,8 @@ ram.runtime = "100M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/linkwarden/linkwarden/archive/refs/tags/v2.8.4.tar.gz"
-        sha256 = "7d3e771c0d965be23e953fc4c853259399664c78141e106684f4bab8742e57f5"
+        url = "https://github.com/linkwarden/linkwarden/archive/refs/tags/v2.9.2.tar.gz"
+        sha256 = "c75225d25d6c644804affdd3fb14ff56ca3dc0ade9104339d17adec93c690280"
         autoupdate.strategy = "latest_github_release"
 
     [resources.system_user]
