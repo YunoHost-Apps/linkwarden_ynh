@@ -21,7 +21,7 @@
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**分发版本：** 2.8.4~ynh1
+**分发版本：** 2.9.2~ynh1
 
 ## 截图
 
