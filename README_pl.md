@@ -21,7 +21,7 @@ Nie powinno być ono edytowane ręcznie.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Dostarczona wersja:** 2.9.2~ynh1
+**Dostarczona wersja:** 2.9.3~ynh1
 
 ## Zrzuty ekranu
 

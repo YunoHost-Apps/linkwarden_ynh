@@ -21,7 +21,7 @@ No se debe editar a mano.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Versión actual:** 2.9.2~ynh1
+**Versión actual:** 2.9.3~ynh1
 
 ## Capturas
 
