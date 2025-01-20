@@ -21,7 +21,7 @@ EZ editatu eskuz.
 Collaborative bookmark manager to collect, organize and archive webpages.
 
 
-**Paketatutako bertsioa:** 2.9.2~ynh1
+**Paketatutako bertsioa:** 2.9.3~ynh1
 
 ## Pantaila-argazkiak
 
