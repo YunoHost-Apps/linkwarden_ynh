@@ -1,14 +1,11 @@
 #!/bin/bash
 
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
 source _common.sh
 source /usr/share/yunohost/helpers
-
-#=================================================
-# INSTALL DEPENDENCIES
-#=================================================
-ynh_script_progression "Installing NodeJS..."
-
-ynh_nodejs_install
 
 #=================================================
 # STOP SYSTEMD SERVICE
@@ -18,11 +15,43 @@ ynh_script_progression "Stopping $app's systemd service..."
 ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
 
 #=================================================
+# ENSURE DOWNWARD COMPATIBILITY
+#=================================================
+ynh_script_progression "Ensuring downward compatibility..."
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --keep=".env"
+# Download, check integrity, uncompress and patch the source from manifest.toml
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env"
+
+#=================================================
+# UPDATE A CONFIG FILE
+#=================================================
+ynh_script_progression "Updating $app's configuration files..."
+
+ynh_config_add --template=".env" --destination="$install_dir/.env"
+
+#=================================================
+# INSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression "Installing NodeJS..."
+
+ynh_nodejs_install
+
+#=================================================
+# REAPPLY SYSTEM CONFIGURATION
+#=================================================
+ynh_script_progression "Upgrading system configurations related to $app..."
+
+ynh_config_add_nginx
+
+ynh_config_add_systemd
+yunohost service add "$app" --log="systemd"
+
+ynh_config_add_logrotate
 
 #=================================================
 # UPGRADE DEPENDENCIES
@@ -30,36 +59,18 @@ ynh_setup_source --dest_dir="$install_dir" --keep=".env"
 ynh_script_progression "Upgrading dependencies..."
 
 pushd "$install_dir"
-    ynh_hide_warnings npm install next --force
-    ynh_hide_warnings yarn build
+	ynh_hide_warnings npm install next --force
+	ynh_hide_warnings yarn build
 popd
 
-#=================================================
-# REAPPLY SYSTEM CONFIGURATIONS
-#=================================================
-ynh_script_progression "Upgrading system configurations related to $app..."
-
-ynh_config_add_nginx
-
-ynh_config_add_systemd
-
-yunohost service add "$app" --log="/var/log/$app/$app.log"
-
-ynh_config_add_logrotate
-
-#=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-ynh_script_progression "Updating configuration..."
-
-ynh_config_add --template=".env" --destination="$install_dir/.env"
+chown -R "$app:$app" "$install_dir"
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start" --wait_until="Starting link preservation" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT
