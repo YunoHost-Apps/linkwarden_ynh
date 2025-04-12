@@ -4,14 +4,17 @@ test_format = 1.0
 
 [default]
 
-# ------------
-# Tests to run
-# ------------
+    # ------------
+    # Tests to run
+    # ------------
 
-#exclude = ["change_url"]
+    # -------------------------------
+    # Default args to use for install
+    # -------------------------------
 
-# -------------------------------
-# Commits to test upgrade from
-# -------------------------------
+    # -------------------------------
+    # Commits to test upgrade from
+    # -------------------------------
 
-#test_upgrade_from.COMMITCODE.name = "2.4.9"
+    # test_upgrade_from.COMMITCODE.name = "2.4.9"
+    test_upgrade_from.4005a643cb95c1f5d226f12618b6a9e8c3f0e23a.name = "Upgrade from 2.9.3~ynh1"
