@@ -63,7 +63,7 @@ pushd "$install_dir"
 	# ynh_hide_warnings npx playwright install --with-deps chromium
 	ynh_hide_warnings  yarn install --network-timeout 10000000
 	ynh_hide_warnings  yarn prisma:generate
-	ynh_hide_warnings  yarn yarn web:build
+	ynh_hide_warnings  yarn web:build
 	ynh_hide_warnings  yarn prisma:deploy
 	ynh_hide_warnings  yarn cache clean
 popd
