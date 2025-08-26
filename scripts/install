@@ -21,6 +21,8 @@ ynh_script_progression "Setting up source files..."
 
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/monolith" --source_id="monolith"
+chmod u+x "$install_dir/monolith/monolith"
 
 #=================================================
 # APP INITIAL CONFIGURATION
@@ -57,10 +59,13 @@ ynh_config_add_logrotate
 ynh_script_progression "Installing $app..."
 
 pushd "$install_dir"
-	ynh_hide_warnings npm install next --force
-	ynh_hide_warnings npx playwright install --with-deps chromium
-	ynh_hide_warnings yarn build
-	ynh_hide_warnings yarn prisma migrate deploy
+	# ynh_hide_warnings npm install next --force
+	# ynh_hide_warnings npx playwright install --with-deps chromium
+	ynh_exec_as_app ynh_hide_warnings yarn install --network-timeout 10000000
+	ynh_exec_as_app ynh_hide_warnings yarn prisma:generate
+	ynh_exec_as_app ynh_hide_warnings yarn yarn web:build
+	ynh_exec_as_app ynh_hide_warnings yarn prisma:deploy
+	ynh_exec_as_app yarn cache clean
 popd
 
 chown -R "$app:$app" "$install_dir"

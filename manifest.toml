@@ -49,6 +49,24 @@ ram.runtime = "100M"
     sha256 = "5137e200ebfbb7abbeea54f53c958edf9c19020ea1338b2fb677f328c16d850c"
     autoupdate.strategy = "latest_github_release"
 
+    [resources.sources.monolith]
+    arm64.url = "https://github.com/Y2Z/monolith/releases/download/v2.10.1/monolith-gnu-linux-aarch64"
+    arm64.sha256 = "7f8cac6291b4015b24b964fcdf115a196abecc59e9149f7aa485175943f99997"
+    armhf.url = "https://github.com/Y2Z/monolith/releases/download/v2.10.1/monolith-gnu-linux-armhf"
+    armhf.sha256 = "5e0ee3c64c5a711de814fad5af9c4a20eab1d13770dabd438d963933ee12c7ef"
+    amd64.url = "https://github.com/Y2Z/monolith/releases/download/v2.10.1/monolith-gnu-linux-x86_64"
+    amd64.sha256 = "663ca914b078e91d5a854b4a07e913c613bbbcfe8fb11a24da1a6ab23c9205df"
+    rename = "monolith"
+    format = "whatever"
+    extract = false
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.upstream = "https://github.com/Y2Z/monolith/"
+    autoupdate.asset.arm64 = "monolith-gnu-linux-aarch64"
+    autoupdate.asset.armhf = "monolith-gnu-linux-armhf"
+    autoupdate.asset.amd64 = "monolith-gnu-linux-x86_64"
+
+
     [resources.system_user]
 
     [resources.install_dir]

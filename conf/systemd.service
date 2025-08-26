@@ -7,9 +7,9 @@ Type=simple
 User=__APP__
 Group=__APP__
 EnvironmentFile=__INSTALL_DIR__/.env
-Environment="PATH=__PATH_WITH_NODEJS__"
+Environment="PATH=__PATH_WITH_NODEJS__:__INSTALL_DIR__/monolith"
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=/usr/bin/yarn start
+ExecStart=/usr/bin/yarn concurrently:start
 Restart=on-failure
 RestartSec=10
 
