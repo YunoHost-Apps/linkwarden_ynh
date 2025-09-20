@@ -19,13 +19,12 @@ userdoc = "https://docs.linkwarden.app/Usage/overview"
 code = "https://github.com/linkwarden/linkwarden"
 
 [integration]
-yunohost = ">= 12.0.9"
+yunohost = ">= 12.1.17"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = true
 
 disk = "50M"
@@ -79,11 +78,10 @@ ram.runtime = "100M"
     [resources.ports]
 
     [resources.apt]
-    packages = "postgresql, postgresql-contrib"
-
-    extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
-    extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
-    extras.yarn.packages = "yarn"
+    packages = "postgresql, postgresql-contrib, yarn"
 
     [resources.database]
     type = "postgresql"
+
+    [resources.nodejs]
+    version = "20"
