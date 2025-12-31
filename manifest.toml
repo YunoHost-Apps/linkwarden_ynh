@@ -19,7 +19,7 @@ userdoc = "https://docs.linkwarden.app/Usage/overview"
 code = "https://github.com/linkwarden/linkwarden"
 
 [integration]
-yunohost = ">= 12.1.17"
+yunohost = ">= 12.1.38"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
