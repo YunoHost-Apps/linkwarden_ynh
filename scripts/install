@@ -51,6 +51,7 @@ ynh_script_progression "Installing $app..."
 pushd "$install_dir"
 	ynh_hide_warnings npm install next --force
 	ynh_hide_warnings npx playwright install --with-deps chromium
+    ynh_hide_warnings yarn install 
 	ynh_hide_warnings yarn build
 	ynh_hide_warnings yarn prisma migrate deploy
 popd
