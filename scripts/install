@@ -51,7 +51,7 @@ ynh_script_progression "Installing $app..."
 pushd "$install_dir"
     corepack enable
     yarn workspaces focus linkwarden @linkwarden/web @linkwarden/worker
-	ynh_hide_warnings npm install next --force
+	ynh_hide_warnings yarn add next
 	ynh_hide_warnings npx playwright install --with-deps chromium
     ynh_hide_warnings yarn prisma:generate
 	ynh_hide_warnings yarn build
