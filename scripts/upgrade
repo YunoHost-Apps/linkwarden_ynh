@@ -47,8 +47,10 @@ ynh_config_add_logrotate
 ynh_script_progression "Upgrading dependencies..."
 
 pushd "$install_dir"
-	ynh_hide_warnings npm install next --force
-	ynh_hide_warnings yarn build
+	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+	ynh_hide_warnings ynh_exec_as_app yarn prisma:generate
+	ynh_hide_warnings ynh_exec_as_app yarn web:build
+	ynh_hide_warnings ynh_exec_as_app yarn prisma:deploy
 popd
 
 chown -R "$app:$app" "$install_dir"
