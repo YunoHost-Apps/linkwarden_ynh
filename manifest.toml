@@ -7,7 +7,7 @@ name = "Linkwarden"
 description.en = "Collaborative bookmark manager to collect, organize and archive webpages"
 description.fr = "Gestionnaire de signets collaboratif pour collecter, organiser et archiver les pages Web"
 
-version = "2.10.0~ynh1"
+version = "2.13.5~ynh1"
 
 maintainers = [ "Lapineige" ]
 
