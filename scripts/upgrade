@@ -47,7 +47,7 @@ ynh_config_add_logrotate
 ynh_script_progression "Upgrading dependencies..."
 
 pushd "$install_dir"
-	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+	ynh_hide_warnings corepack enable && corepack prepare yarn@4.13.0 --activate
 	ynh_hide_warnings yarn install
 	ynh_hide_warnings yarn prisma:generate
 	ynh_hide_warnings yarn web:build
