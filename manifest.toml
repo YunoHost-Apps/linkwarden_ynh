@@ -60,7 +60,7 @@ ram.runtime = "100M"
     [resources.ports]
 
     [resources.apt]
-    packages = "postgresql, postgresql-contrib, yarn"
+    packages = "postgresql, postgresql-contrib"
 
     [resources.database]
     type = "postgresql"
