@@ -48,6 +48,11 @@ ram.runtime = "100M"
     sha256 = "b2d0a3aa53cdb830e669c45fdbf615cf5d57f54889d5653338eca5e211070426"
     autoupdate.strategy = "latest_github_release"
 
+    [resources.sources.monolith]
+    amd64.url = "https://github.com/Y2Z/monolith/releases/download/v2.10.1/monolith-gnu-linux-x86_64"
+    amd64.sha256 = "663ca914b078e91d5a854b4a07e913c613bbbcfe8fb11a24da1a6ab23c9205df"
+    am64.autoupdate.strategy = "latest_github_release"
+
     [resources.system_user]
 
     [resources.install_dir]
