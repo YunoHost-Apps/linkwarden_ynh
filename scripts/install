@@ -52,7 +52,7 @@ ynh_script_progression "Installing $app..."
 pushd "$install_dir"
     ynh_hide_warnings corepack enable
 	ynh_hide_warnings env NODE_OPTIONS="--max-old-space-size=2048" yarn workspaces focus linkwarden @linkwarden/web @linkwarden/worker
-	ynh_hide_warnings npx playwright install --with-deps chromium
+	ynh_hide_warnings ynh_exec_as_app npx playwright install --with-deps chromium
     ynh_hide_warnings env NODE_OPTIONS="--max-old-space-size=2048" yarn prisma:generate
     ynh_hide_warnings env NODE_OPTIONS="--max-old-space-size=2048" yarn web:build
     ynh_hide_warnings env NODE_OPTIONS="--max-old-space-size=2048" yarn prisma:deploy
