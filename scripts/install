@@ -50,11 +50,12 @@ ynh_config_add_logrotate
 ynh_script_progression "Installing $app..."
 
 pushd "$install_dir"
-    ynh_hide_warnings corepack enable && corepack prepare yarn@latest --activate
-	ynh_hide_warnings npm install next --force
+    ynh_hide_warnings corepack enable
+	ynh_hide_warnings yarn workspaces focus linkwarden @linkwarden/web @linkwarden/worker
 	ynh_hide_warnings npx playwright install --with-deps chromium
-	ynh_hide_warnings yarn build
-	ynh_hide_warnings yarn prisma migrate deploy
+    ynh_hide_warnings yarn prisma:generate
+    ynh_hide_warnings yarn web:build
+    ynh_hide_warnings yarn prisma:deploy
 popd
 
 chown -R "$app:$app" "$install_dir"
