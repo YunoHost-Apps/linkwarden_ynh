@@ -21,7 +21,7 @@ code = "https://github.com/linkwarden/linkwarden"
 [integration]
 yunohost = ">= 12.1.17"
 helpers_version = "2.1"
-architectures = "all"
+architectures =  ["amd64", "arm64", "armhf"]
 multi_instance = true
 
 ldap = false
@@ -51,7 +51,17 @@ ram.runtime = "100M"
     [resources.sources.monolith]
     amd64.url = "https://github.com/Y2Z/monolith/releases/download/v2.10.1/monolith-gnu-linux-x86_64"
     amd64.sha256 = "663ca914b078e91d5a854b4a07e913c613bbbcfe8fb11a24da1a6ab23c9205df"
-    am64.autoupdate.strategy = "latest_github_release"
+    amd64.autoupdate.strategy = "latest_github_release"
+
+    arm64.url = "https://github.com/Y2Z/monolith/releases/download/v2.10.1/monolith-gnu-linux-aarch64"
+    arm64.sha256 = "7f8cac6291b4015b24b964fcdf115a196abecc59e9149f7aa485175943f99997"
+    arm64.autoupdate.strategy = "latest_github_release"
+
+    armhf.url = "https://github.com/Y2Z/monolith/releases/download/v2.10.1/monolith-gnu-linux-armhf"
+    armhf.sha256 = "5e0ee3c64c5a711de814fad5af9c4a20eab1d13770dabd438d963933ee12c7ef"
+    armhf.autoupdate.strategy = "latest_github_release"
+    
+    extract = false
 
     [resources.system_user]
 
