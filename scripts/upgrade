@@ -59,7 +59,7 @@ pushd "$install_dir"
     ynh_hide_warnings env NODE_OPTIONS="--max-old-space-size=2048" yarn web:build
     ynh_hide_warnings env NODE_OPTIONS="--max-old-space-size=2048" yarn prisma:deploy
     export PLAYWRIGHT_BROWSERS_PATH="$install_dir/.cache/ms-playwright"
-    npx playwright install --with-deps chromium
+    ynh_hide_warnings npx playwright install --with-deps chromium
 popd
 
 chown -R "$app:$app" "$install_dir"
