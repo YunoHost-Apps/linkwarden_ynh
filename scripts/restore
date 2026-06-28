@@ -13,6 +13,11 @@ ynh_script_progression "Restoring the app main directory..."
 
 ynh_restore "$install_dir"
 
+pushd "$install_dir"
+    ynh_hide_warnings corepack enable
+    ynh_hide_warnings corepack yarn prisma:generate
+popd
+
 #=================================================
 # RESTORE THE DATA DIRECTORY
 #=================================================
