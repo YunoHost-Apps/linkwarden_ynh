@@ -24,7 +24,7 @@ ynh_script_progression "Ensuring downward compatibility..."
 ynh_script_progression "Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source from manifest.toml
-ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env.local data"
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env data"
 ynh_setup_source --source_id=monolith  --dest_dir="$install_dir/monolith" 
 chmod +x "$install_dir/monolith/monolith"
 
