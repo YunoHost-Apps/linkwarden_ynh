@@ -18,8 +18,10 @@ ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
 #=================================================
 ynh_script_progression "Ensuring downward compatibility..."
 
-if [ ! -f "$install_dir.env.local" ]; then
+if [ ! -f "$install_dir/.env.local" ]; then
+ynh_config_add --template=".env.local" --destination="$install_dir/.env.local"
 fi
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
