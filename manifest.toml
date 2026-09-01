@@ -7,7 +7,7 @@ name = "Linkwarden"
 description.en = "Collaborative bookmark manager to collect, organize and archive webpages"
 description.fr = "Gestionnaire de signets collaboratif pour collecter, organiser et archiver les pages Web"
 
-version = "2.16.1~ynh1"
+version = "2.16.2~ynh1"
 
 maintainers = [ "Lapineige" ]
 
@@ -44,8 +44,8 @@ ram.runtime = "100M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/linkwarden/linkwarden/archive/refs/tags/v2.16.1.tar.gz"
-    sha256 = "24fb4b8ef849befaaacd6248c3fc2ee4dde338b8bd27318ab7623afb2857fe80"
+    url = "https://github.com/linkwarden/linkwarden/archive/refs/tags/v2.16.2.tar.gz"
+    sha256 = "103ed885dfe3b033d9e7725f98f143a78e5638a931d5463df6a983db93cc5407"
     autoupdate.strategy = "latest_github_release"
 
     [resources.sources.monolith]
