@@ -19,7 +19,7 @@ userdoc = "https://docs.linkwarden.app/Usage/overview"
 code = "https://github.com/linkwarden/linkwarden"
 
 [integration]
-yunohost = ">= 12.1.38"
+yunohost = ">= 12.1.40"
 helpers_version = "2.1"
 architectures =  ["amd64", "arm64", "armhf"]
 multi_instance = true
@@ -81,4 +81,4 @@ ram.runtime = "100M"
     type = "postgresql"
 
     [resources.nodejs]
-    version = "22"
+    version = "24"
